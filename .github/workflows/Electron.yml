@@ -21,6 +21,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: cd Dashboard && yarn --network-timeout 1000000000
+        run: yarn --network-timeout 1000000000
       - name: Build
-        run: cd Dashboard && yarn build
+        run: yarn build
