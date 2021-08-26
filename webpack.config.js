@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = (env, argv) => {
-  const nodeModules = {};
+  const nodeModules = { };
   fs.readdirSync("node_modules")
     .filter((x) => [".bin"].indexOf(x) === -1)
     .forEach((mod) => {
@@ -21,7 +21,6 @@ module.exports = (env, argv) => {
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
     },
-    devServer: { contentBase: path.join(__dirname, "src") },
     devtool: "source-map",
     module: {
       rules: [
@@ -67,7 +66,6 @@ module.exports = (env, argv) => {
         },
       },
     ],
-    watch: true,
     target: "electron-renderer",
     externals: nodeModules,
   };
