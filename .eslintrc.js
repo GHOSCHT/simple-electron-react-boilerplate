@@ -22,6 +22,11 @@ module.exports = {
     quotes: ["error", "double"],
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "no-console": "off",
+    "max-len": ["error", { code: 300 }],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "import/extensions": [
       "error",
       "ignorePackages",
